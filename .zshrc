@@ -32,4 +32,10 @@ PS1='${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%c%{$reset_c
 # load ASDF for version management
 [ -d "$HOME/.asdf" ] && . $HOME/.asdf/asdf.sh
 
+# autoload zsh completion system
+autoload -U compinit && compinit
+
+# git completions
+[ -f "~/git-completion.zsh" ] && source ~/git-completion.zsh
+
 alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
