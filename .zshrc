@@ -11,6 +11,9 @@ HISTFILE=~/.zhistory
 HISTSIZE=4096
 SAVEHIST=4096
 
+# makes fn + delete delete forward
+bindkey "^[[3~" delete-char
+
 # modify the prompt to contain git branch name if applicable
 git_prompt_info() {
   current_branch=$(git rev-parse --abbrev-ref HEAD 2> /dev/null)
