@@ -1,0 +1,31 @@
+[user]
+    name = Andrew Larose
+    email = werdnalarose@gmail.com
+[github]
+    user = androse
+
+[alias]
+	s = status
+  d = diff
+	co = checkout
+
+[core]
+	# Use custom `.gitignore` and `.gitattributes`
+	excludesfile = ~/.gitignore
+	editor = code --wait
+
+[color]
+	# Use colors in Git commands that are capable of colored output when outputting to the terminal
+	ui = auto
+
+[merge]
+	# Include summaries of merged commits in newly created merge commit messages
+	log = true
+
+[push]
+	default = matching
+
+[diff]
+    tool = default-difftool
+[difftool "default-difftool"]
+    cmd = code --wait --diff $LOCAL $REMOTE
