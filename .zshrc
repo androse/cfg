@@ -18,6 +18,11 @@ bindkey "^[[3~" delete-char
 git_prompt_info() {
   current_branch=$(git rev-parse --abbrev-ref HEAD 2> /dev/null)
   if [[ -n $current_branch ]]; then
+    # indicate when there are uncommited changes
+    if [[ -n $(git status -s) ]]; then
+      current_branch+=" *"
+    fi
+
     echo " %{$fg_bold[green]%}$current_branch%{$reset_color%}"
   fi
 }
