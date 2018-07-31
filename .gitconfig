@@ -6,7 +6,7 @@
 
 [alias]
 	s = status
-  d = diff
+	d = diff
 	co = checkout
 
 [core]
@@ -23,7 +23,7 @@
 	log = true
 
 [push]
-	default = matching
+	default = simple
 
 [diff]
     tool = default-difftool
