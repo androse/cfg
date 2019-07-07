@@ -27,10 +27,10 @@ git_prompt_info() {
   fi
 }
 setopt promptsubst
-PS1='${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%c%{$reset_color%}$(git_prompt_info) $ '
+PS1='%{$fg_bold[blue]%}%c%{$reset_color%}$(git_prompt_info) $ '
 
 # load ASDF for version management
-[ -d "$HOME/.asdf" ] && . $HOME/.asdf/asdf.sh
+[[ -d "$HOME/.asdf" ]] && . $HOME/.asdf/asdf.sh
 
 # autoload zsh completion system
 autoload -U compinit && compinit
@@ -39,3 +39,9 @@ autoload -U compinit && compinit
 [ -f "~/git-completion.zsh" ] && source ~/git-completion.zsh
 
 alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
+
+# https://github.com/tmuxinator/tmuxinator
+[ -f "~/.bin/tmuxinator.zsh" ] && source ~/.bin/tmuxinator.zsh
+
+# Set the default editor to vs code
+export EDITOR='code'
