@@ -45,3 +45,9 @@ alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 
 # Set the default editor to vs code
 export EDITOR='code'
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+eval "$(rbenv init -)"
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
+[ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"
+export PATH="$HOME/.bin:$PATH"
